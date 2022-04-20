@@ -1,38 +1,27 @@
 <template>
   <div class="main">
-    <div class="sidebar">
-      <div class="sidebar-header">
-        <MenuIcon
-          style="margin-left: 25px; margin-right: 25px"
-          fillColor="#FFFFFF"
-        />
+    <SideBar/>
+    <div class="body">
+      <div class="topbar">
+        <div class="searchbar">
+          <!-- <font-awesome-icon style="color:white;" :icon="['fas','magnifying-glass']"/> -->
+          <input type="text" class="search-input" placeholder="Search">
 
-        <img
-          class="logo"
-          src="./assets/yt_logo_rgb_dark.png"
-          alt=""
-          srcset=""
-        />
-      </div>
-      <div class="nav-items-1">
-        <button>Home</button>
-        <button>Explore</button>
-        <button>Shorts</button>
-        <button>Subscriptions</button>
+        </div>
+
       </div>
     </div>
-    <div class="body"></div>
   </div>
 </template>
 
 <script>
-import MenuIcon from "vue-material-design-icons/Menu.vue";
+import SideBar from "./components/SideBar.vue";
+// import MenuIcon from "vue-material-design-icons/Menu.vue";
+// import Home from "vue-material-design-icons/Home.vue";
 
 export default {
   name: "App",
-  components: {
-    MenuIcon,
-  },
+  components: { SideBar },
 };
 </script>
 
@@ -44,33 +33,39 @@ export default {
 .main {
   display: flex;
 }
-.sidebar {
-  width: 15vw;
-  height: 100vh;
-  background-color: #212121;
-}
-.sidebar-header {
-  display: flex;
-  margin-top: 20px;
-  justify-content: start;
-  align-items: flex-start;
-}
+
 .body {
   width: 85vw;
   height: 100vh;
-  background-color: #1e252c;
+  background-color: #212121;
 }
-.logo {
-  height: 1.25rem;
-}
-.nav-items-1{
-  display: flex;
-  flex-direction: column;
-}
-.nav-items-1 button {
-  padding: 10px;
-  background: transparent;
+
+.nav-icons {
   color: white;
+  margin-right: 10px;
+}
+.searchbar{
+  justify-content: start;
+  width: 40vw;
+  margin: 10px;
+  height: 5vh;
+  margin: auto;
+  display: flex;
+  border: 1px solid #484848;
+}
+.search-input
+{
+  height: 100%;
+  background: #212121;
+  margin-left: 25px;
+  width: 40vw;
   border: none;
+  color: gray;
+
+}
+.topbar{
+  height: 8vh;
+  background: #212121;
+  border-bottom: 1px solid rgba(68, 68, 68, 0.542);
 }
 </style>
