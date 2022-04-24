@@ -89,6 +89,22 @@ export default {
   border: none;
   text-align: start;
 }
+.nav-items-1 button:hover {
+  padding: 10px 10px 10px 15px;
+  color: white;
+  margin-left: 10px;
+  border: none;
+  text-align: start;
+  background: #434343;
+}
+.nav-items-2 button:hover {
+  padding: 10px 10px 10px 15px;
+  color: white;
+  margin-left: 10px;
+  border: none;
+  text-align: start;
+  background: #434343;
+}
 .nav-items-2 button {
   padding: 10px 10px 10px 15px;
   background: transparent;

@@ -1,27 +1,22 @@
 <template>
   <div class="main">
-    <SideBar/>
+    <SideBar />
     <div class="body">
-      <div class="topbar">
-        <div class="searchbar">
-          <!-- <font-awesome-icon style="color:white;" :icon="['fas','magnifying-glass']"/> -->
-          <input type="text" class="search-input" placeholder="Search">
-
-        </div>
-
-      </div>
+      <TopBar/>
+      
     </div>
   </div>
 </template>
 
 <script>
 import SideBar from "./components/SideBar.vue";
+import TopBar from "./components/TopBar.vue";
 // import MenuIcon from "vue-material-design-icons/Menu.vue";
 // import Home from "vue-material-design-icons/Home.vue";
 
 export default {
   name: "App",
-  components: { SideBar },
+  components: { SideBar, TopBar },
 };
 </script>
 
@@ -44,28 +39,31 @@ export default {
   color: white;
   margin-right: 10px;
 }
-.searchbar{
+.searchbar {
   justify-content: start;
   width: 40vw;
-  margin: 10px;
   height: 5vh;
-  margin: auto;
   display: flex;
   border: 1px solid #484848;
+  margin-top: 10px;
+  margin-left: 15vw;
 }
-.search-input
-{
+.search-input {
   height: 100%;
   background: #212121;
   margin-left: 25px;
-  width: 40vw;
+  width: 35vw;
   border: none;
   color: gray;
-
 }
-.topbar{
+.topbar {
   height: 8vh;
+  display: flex;
   background: #212121;
   border-bottom: 1px solid rgba(68, 68, 68, 0.542);
+}
+.topbar-options {
+  display: flex;
+  margin-left:auto;
 }
 </style>
